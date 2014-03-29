@@ -1,6 +1,7 @@
 body
 {
-    background-image:url('http://dangerousintersection.org/wp-content/uploads/2007/11/U.S.%20Capitol%20at%20night.jpg');
+    background-color: black;
+    background-image:url('http://wallsistah.com/wp-content/uploads/2013/10/new-york-city-buliding-black-and-white-photography-0h.jpg');
     height:1vh;
     background-repeat: no-repeat;
 }
@@ -25,25 +26,35 @@ body
 #themission
 {
 	text-align: center;
-	color:orange;
+	color: black;
 	font-family: Palatino Linotype;
 	font-size: 45px;
 	padding: 40px;
+	font-weight: bolder;
 }
 #team
 {
 	text-align: center;
-	color:orange;
+	color:white;
 	font-family: Palatino Linotype;
 	font-size: 45px;
 	padding: 40px;
+	font-weight: bolder;
+}
+#details
+{
+	background-color: yellow;
+	opacity: 0.7;
+	border-radius: 80px;
+
 }
 #sub
 {
 	text-align: center;
-	color: white;
+	color: black;
 	font-family: Palatino Linotype;
 	font-size: 40px;
+	font-weight: bolder;
 }
 a
 {
@@ -52,16 +63,18 @@ a
 #math
 {
 	font-size: 40px;
-	color: white;
+	color: blue;
 	text-align: center;
+	font-weight: bolder;
 }
 #details_mission
 {
 	font-size: 35px;
 	font-family: Palatino Linotype;
 	text-align: center;
-	color: white;
+	color: black;
 	padding: 20px;
+	font-weight: bolder;
 }
 #team
 {
@@ -70,24 +83,35 @@ a
 }
 .abhinav
 {
-	color:white;
+	color:blue;
 	text-align: center;
 	font-family: Palatino Linotype;
 	font-size: 35px;
+	font-weight: bolder;
 }
 .jin
 {
-	color:white;
+	color:blue;
 	text-align: center;
 	font-family: Palatino Linotype;
 	font-size: 35px;
+	font-weight: bolder;
 }
 .jude
 {
-	color:white;
+	color:blue;
 	text-align: center;
 	font-family: Palatino Linotype;
 	font-size: 35px;
+	font-weight: bolder;
+}
+.matthew
+{
+	color:blue;
+	text-align: center;
+	font-family: Palatino Linotype;
+	font-size: 35px;
+	font-weight: bolder;	
 }
 menu
 {
@@ -95,8 +119,8 @@ position: fixed;
 opacity: 0.8;
 top: 20px;
 left: 30px;
-height: 150px;
-width: 260px;
+height: 450px;
+width: 170px;
 z-index: 65536;
 background: gray;
 overflow-x: visible;
@@ -140,9 +164,11 @@ img
 }
 li
 {
-	padding-right: 20px;
+	padding: 10px;
+	float: left;
+	
 }
-li:hover
+.topbar:hover
 {
 	background-color:orange ;
 	border-radius: 40px;
