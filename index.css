@@ -2,13 +2,15 @@ body
 {
     background-image:url('DSC_0666.jpg');
     height:1vh;
+    background-repeat: no-repeat;
+
 }
 
 #logo {
     font-size: 100px;
     color:#ecf0f1;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 #button {
@@ -32,7 +34,7 @@ body
     height: 65px;
     margin-top: 0;
 margin-left: -550px;
-
+position: fixed;
 }
 
 #menup {
@@ -40,3 +42,8 @@ font-size: 30px;
     margin-top: 0;
 }
 
+
+#gridcontent {
+    height:1000px;
+    color: white;
+}
