@@ -15,6 +15,10 @@ img
 	height: 300px;
 	width: 100%;
 }
+#buttons
+{text-align:center;
+}
+
 body
 {
 	background-image: url('http://ipicturee.com/wp-content/uploads/2013/09/New-York-City-Sunset-Photos-HD-Wallpaper.jpg');
