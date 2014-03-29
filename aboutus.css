@@ -1,6 +1,8 @@
 body
 {
-	background-color: black;
+    background-image:url('http://dangerousintersection.org/wp-content/uploads/2007/11/U.S.%20Capitol%20at%20night.jpg');
+    height:1vh;
+    background-repeat: no-repeat;
 }
 #mission
 {
@@ -152,3 +154,4 @@ li:hover
 	font-family: Palatino Linotype;
 	text-align: center;
 }
+
