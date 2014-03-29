@@ -6,17 +6,19 @@
   <h1 style="font-size:40px;font-family:Verdana"><strong>Register Here</strong></h1>
    <form>
      
-     <PRE>
-     FirstName:<input type="text" name="firstname"><br>
+     <table>
+     
+     <tr>FirstName:<input type="text" name="firstname"><br></tr>
    
-      <P> 
-     LastName:<input type="text" name="lastname"><br>
-      <P>
-     Email:<input type="text" name="email"><br>
-      <P>
-     Password:<input type="password" name="pwd"><br>
-      <P>
+       
+     <tr>LastName:<input type="text" name="lastname"><br></tr>
+    
+     <tr>Email:<input type="text" name="email"><br></tr>
+      
+     <tr>Password:<input type="password" name="pwd"><br></tr>
+    
     <input type="submit" value""submit>
+    </table>
    
    </PRE>
    </form>
