@@ -4,7 +4,9 @@
   </head>
   <body>
   <h1 style="font-size:40px;font-family:Verdana"><strong>Register Here</strong></h1>
-  
-  
+   <form>
+     FirstName<input type="text" name="firstname"><br>
+     LastName<input type="text" name="lastname">
+   </form>
   </body>
   </html>
