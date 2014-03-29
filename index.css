@@ -8,7 +8,7 @@ body
     font-size: 100px;
     color:#ecf0f1;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 1%;
 }
 
 #button {
@@ -28,7 +28,15 @@ body
 }
 
 #showLeft {
-    width:100px;
+    width:1325px;
+    height: 65px;
     margin-top: 0;
+margin-left: -550px;
 
 }
+
+#menup {
+font-size: 30px;
+    margin-top: 0;
+}
+
