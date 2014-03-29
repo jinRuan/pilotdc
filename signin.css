@@ -15,13 +15,13 @@ img
 	height: 300px;
 	width: 100%;
 }
-#buttons
-{	
-	text-align: center;
-	position: absolute;
-	height: 300px;
-	width: 200px;
-}
+/*#buttons*/
+/*	text-align: center;*/
+/*	position: absolute;*/
+/*	height: 300px;*/
+/*	width: 200px;*/
+/* it didnt work to center buttons
+-matt*/
 
 body
 {
