@@ -5,13 +5,15 @@
   <body>
   <h1 style="font-size:40px;font-family:Verdana"><strong>Register Here</strong></h1>
    <form>
-     FirstName<input type="text" name="firstname"><br>
+     FirstName:<input type="text" name="firstname"><br>
    
    
-     LastName<input type="text" name="lastname">
+     LastName:<input type="text" name="lastname">
    
-     Email<input type="text" name="email">
+     Email:<input type="text" name="email">
    
+     Password:<input type="password" name="pwd">
+  
    </form>
   </body>
   </html>
