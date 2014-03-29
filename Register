@@ -6,7 +6,7 @@
   <h1 style="font-size:40px;font-family:Verdana"><strong>Register Here</strong></h1>
    <form>
      
-     <table>
+     <table style="width:20px" >
      
      <tr>FirstName:<input type="text" name="firstname"><br></tr>
    
