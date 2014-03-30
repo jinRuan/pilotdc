@@ -1,7 +1,8 @@
 body
 {
-    background-image:url('DSC_0666.jpg');
+    background-image:url('img/group.jpg');
     background-repeat: no-repeat;
+    background-color: #95a5a6;
 
 
 }
@@ -34,14 +35,13 @@ body
     width:1325px;
     height: 65px;
     margin-top: 0;
-margin-left: -550px;
-position: fixed;
+    margin-left: -550px;
+    position: fixed;
 }
 
 #menup {
-font-size: 30px;
+    font-size: 30px;
     margin-top: 0;
-    color:white;
 }
 
 
@@ -49,3 +49,4 @@ font-size: 30px;
     height:2000px;
     color: white;
 }
+
