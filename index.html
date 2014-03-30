@@ -14,13 +14,167 @@
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <script src="js/modernizr.custom.js"></script>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <meta name="description" value="Click the image in this carousel and drag it to the left or right and see how the carousel automatically completes the scrolling animation after releasing the image." />
+    <meta name="keywords" value="drag, carousel, jquery, example, slideshow" />
+    <title>Draggable carousel that automatically completes the scrolling animation</title>
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // the carousel
+        var $carousel = null;
+
+        //	the draggable wrapper
+        var $wrapper = null;
+
+        //	the width of one item
+        var itemWidth = 800;
+
+        //	the duration of the scrolling
+        var scrollDuration = 300;
+
+        //	dragging-engine
+        var startDragPosition = false;
+        function startDrag( event ) {
+            event.preventDefault();
+
+            if ( $carousel.triggerHandler( 'isScrolling' ) ) {
+                startDragPosition = false;
+                return;
+            }
+            startDragPosition = event.pageX;
+            $wrapper.bind(
+                    'mousemove',
+                    function( e ) {
+                        $wrapper.css({
+                            'marginLeft': -(itemWidth + startDragPosition - e.pageX)
+                        });
+                    }
+            );
+        }
+        function stopDrag( event ) {
+            event.preventDefault();
+            $wrapper.unbind('mousemove');
+
+            if ( startDragPosition ) {
+                var currentDragPosition = event.pageX;
+                var direction = false;
+                if ( startDragPosition < currentDragPosition ) {
+                    direction = 'prev';
+                } else if ( startDragPosition > currentDragPosition ) {
+                    direction = 'next';
+                }
+                if ( direction ) {
+                    $carousel.trigger( direction );
+                    $wrapper.animate({
+                        'marginLeft': -itemWidth
+                    }, scrollDuration);
+                }
+            }
+            startDragPosition = false;
+        }
+
+        $(function() {
+
+            //	the carousel
+            $carousel = $('#carousel');
+            $carousel.carouFredSel({
+                width: 800 * 3,
+                height: 400,
+                align: false,
+                items: {
+                    visible: 3,
+                    start: -1
+                },
+                scroll: {
+                    items: 1,
+                    duration: scrollDuration
+                },
+                auto: false
+            });
+
+            //	make the wrapper draggable
+            $wrapper = $carousel.parent();
+            $wrapper.css({
+                'cursor': 'move',
+                'marginLeft': -itemWidth
+            });
+            $wrapper.bind('mousedown', startDrag)
+            $wrapper.bind('mouseup', stopDrag)
+            $wrapper.bind('mouseleave', stopDrag);
+        });
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            min-height: 550px;
+            background-color: #eee;
+        }
+        body * {
+            font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+            font-size: 14px;
+            color: #333;
+            line-height: 22px;
+        }
+        body h3 {
+            color: #999;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #wrapper {
+            background-color: #fff;
+            box-shadow: 0 0 30px #999;
+            border: 20px solid #fff;
+            width: 800px;
+            height: 400px;
+            margin: -220px 0 0 -420px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        #carousel img {
+            display: block;
+            float: left;
+            border: none;
+        }
+
+        #donate-spacer {
+            height: 100%;
+            margin-bottom: -90px;
+        }
+        #donate {
+            border-top: 1px solid #999;
+            width: 750px;
+            padding: 50px 75px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #donate p, #donate form {
+            margin: 0;
+            float: left;
+        }
+        #donate p {
+            width: 650px;
+        }
+        #donate form {
+            width: 100px;
+        }
+    </style>
 
 </head>
 <body class="cbp-spmenu-push">
 <div class="main">
     <section>
         <!-- Class "cbp-spmenu-open" gets applied to menu -->
-        <button id="showLeft"><p id="menup"> &#9776; </p></button>
+        <button id="showLeft" style="z-index: 2;"><p id="menup"> &#9776; </p></button>
     </section>
 </div>
 <p id="logo">Hackhub</p>
@@ -37,7 +191,15 @@
 
 <div id="gridcontent">
 
+    <div id="wrapper" style="margin-top: 800px;">
+        <div id="carousel" >
+            <img src="img/img1.png" width="800" height="427" />
+            <img src="img/img2.png" width="800" height="427" />
+            <img src="img/img3.png" width="800" height="427" />
+            <img src="img/img3.png" width="800" height="427" />
 
+        </div>
+    </div>
 </div>
 
 
