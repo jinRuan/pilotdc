@@ -48,3 +48,12 @@ font-size: 30px;
     height:2000px;
     color: white;
 }
+.row {
+    width: 100%;
+margin-left: auto;
+margin-right: auto;
+margin-top: -1200px;
+margin-bottom: 0;
+max-width: 72.5em;
+background-color: rgba(127, 255, 212, 0);
+}
