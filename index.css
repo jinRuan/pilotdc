@@ -22,7 +22,7 @@ body
     height:50px;
     margin-top: 150px;
     margin-left: 375px;
-    background-color: #1abc9c;
+    background-color: #9b59b6;
 
 }
 
@@ -32,6 +32,9 @@ body
     vertical-align: middle;
     font-size: 40px;
     line-height: 50px;
+    font-family: 'Kameron', serif;
+
+
 }
 
 #showLeft {
