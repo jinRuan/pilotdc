@@ -1,0 +1,50 @@
+body
+{
+    background-image:url('DSC_0666.jpg');
+    background-repeat: no-repeat;
+
+
+}
+
+#logo {
+    font-size: 100px;
+    color:#ecf0f1;
+    text-align: center;
+    margin-top: 7%;
+}
+
+#button {
+    width:500px;
+    height:50px;
+    margin-top: 150px;
+    margin-left: 375px;
+    background-color: #1abc9c;
+
+}
+
+#account {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#showLeft {
+    width:1325px;
+    height: 65px;
+    margin-top: 0;
+margin-left: -550px;
+position: fixed;
+}
+
+#menup {
+font-size: 30px;
+    margin-top: 0;
+}
+
+
+#gridcontent {
+    height:2000px;
+    color: white;
+}
