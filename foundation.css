@@ -161,7 +161,49 @@ select {
         clear: both; }
         
         
-        
+        .row6 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1200px;
+  margin-bottom: 0;
+  max-width: 72.5em;
+  background-color:transparent;
+  *zoom: 1; }
+  .row6:before, .row6:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row6.collapse .column,
+  .row6.collapse .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+  .row6 .row6 {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1; }
+    .row6 .row6:before, .row6 .row6:after {
+      content: " ";
+      display: table; }
+    .row6 .row6:after {
+      clear: both; }
+    .row6 .row6.collapse {
+      width: auto;
+      margin: 0;
+      max-width: none;
+      *zoom: 1; }
+      .row6 .row6.collapse:before, .row6 .row6.collapse:after {
+        content: " ";
+        display: table; }
+      .row6 .row6.collapse:after {
+        clear: both; }
         
         
         
