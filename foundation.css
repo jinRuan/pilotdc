@@ -18,6 +18,7 @@ object,
 embed {
   max-width: 100%;
   height: auto; }
+  
 
 object,
 embed {
@@ -124,18 +125,18 @@ select {
   max-width: 72.5em;
   background-color:transparent;
   *zoom: 1; }
-  .row:before, .row:after {
+  .row2:before, .row2:after {
     content: " ";
     display: table; }
-  .row:after {
+  .row2:after {
     clear: both; }
-  .row.collapse .column,
-  .row.collapse .columns {
+  .row2.collapse .column,
+  .row2.collapse .columns {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     float: left; }
-  .row .row {
+  .row2 .row2 {
     width: auto;
     margin-left: -0.9375em;
     margin-right: -0.9375em;
@@ -143,20 +144,20 @@ select {
     margin-bottom: 0;
     max-width: none;
     *zoom: 1; }
-    .row .row:before, .row .row:after {
+    .row2 .row2:before, .row2 .row2:after {
       content: " ";
       display: table; }
-    .row .row:after {
+    .row2 .row2:after {
       clear: both; }
-    .row .row.collapse {
+    .row2 .row2.collapse {
       width: auto;
       margin: 0;
       max-width: none;
       *zoom: 1; }
-      .row .row.collapse:before, .row .row.collapse:after {
+      .row2 .row2.collapse:before, .row2 .row2.collapse:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after {
+      .row2 .row2.collapse:after {
         clear: both; }
         
         
