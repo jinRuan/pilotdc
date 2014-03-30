@@ -9,11 +9,11 @@ body
 p.first
 {
   background-color:white;
-  float:right;
+  text-align:right;
 }
 
 p.second
 {
     background-color:white;
-  float:right;
+    float:right;
 }
