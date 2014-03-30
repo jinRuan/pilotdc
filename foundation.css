@@ -58,7 +58,9 @@ img {
 .antialiased {
   -webkit-font-smoothing: antialiased; }
 
-
+img {
+  display: inline-block;
+  vertical-align: middle; }
 
 textarea {
   height: auto;
