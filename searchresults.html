@@ -1,1 +1,475 @@
-asdf
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <title>Main Page</title>
+   
+    <link rel="stylesheet" type="text/css" href="__index__.css">
+        <link rel="stylesheet" type="text/css" href="foundation.css">
+        <link rel="stylesheet" type="text/css" href="surfaceui.css">
+          <!--SHOULD THESE BE IN THE HEAD-->
+            <link rel="stylesheet" href="foundation.css">
+             <link rel="stylesheet" href="surfaceui.css">
+           
+    <!-- this is for surfaceui and foundation-->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint: Slide and Push Menus</title>
+    <meta name="description" content="Blueprint: Slide and Push Menus" />
+    <meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <meta name="description" value="Click the image in this carousel and drag it to the left or right and see how the carousel automatically completes the scrolling animation after releasing the image." />
+    <meta name="keywords" value="drag, carousel, jquery, example, slideshow" />
+    <title>Draggable carousel that automatically completes the scrolling animation</title>
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // the carousel
+        var $carousel = null;
+
+        //	the draggable wrapper
+        var $wrapper = null;
+
+        //	the width of one item
+        var itemWidth = 800;
+
+        //	the duration of the scrolling
+        var scrollDuration = 300;
+
+        //	dragging-engine
+        var startDragPosition = false;
+        function startDrag( event ) {
+            event.preventDefault();
+
+            if ( $carousel.triggerHandler( 'isScrolling' ) ) {
+                startDragPosition = false;
+                return;
+            }
+            startDragPosition = event.pageX;
+            $wrapper.bind(
+                    'mousemove',
+                    function( e ) {
+                        $wrapper.css({
+                            'marginLeft': -(itemWidth + startDragPosition - e.pageX)
+                        });
+                    }
+            );
+        }
+        function stopDrag( event ) {
+            event.preventDefault();
+            $wrapper.unbind('mousemove');
+
+            if ( startDragPosition ) {
+                var currentDragPosition = event.pageX;
+                var direction = false;
+                if ( startDragPosition < currentDragPosition ) {
+                    direction = 'prev';
+                } else if ( startDragPosition > currentDragPosition ) {
+                    direction = 'next';
+                }
+                if ( direction ) {
+                    $carousel.trigger( direction );
+                    $wrapper.animate({
+                        'marginLeft': -itemWidth
+                    }, scrollDuration);
+                }
+            }
+            startDragPosition = false;
+        }
+
+        $(function() {
+
+            //	the carousel
+            $carousel = $('#carousel');
+            $carousel.carouFredSel({
+                width: 800 * 3,
+                height: 400,
+                align: false,
+                items: {
+                    visible: 3,
+                    start: -1
+                },
+                scroll: {
+                    items: 1,
+                    duration: scrollDuration
+                },
+                auto: false
+            });
+
+            //	make the wrapper draggable
+            $wrapper = $carousel.parent();
+            $wrapper.css({
+                'cursor': 'move',
+                'marginLeft': -itemWidth
+            });
+            $wrapper.bind('mousedown', startDrag)
+            $wrapper.bind('mouseup', stopDrag)
+            $wrapper.bind('mouseleave', stopDrag);
+        });
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            min-height: 550px;
+                    }
+        body * {
+            font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+            font-size: 14px;
+            color: #333;
+            line-height: 22px;
+        }
+        body h3 {
+            color: #999;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #wrapper {
+            background-color: #fff;
+            box-shadow: 0 0 30px #999;
+            border: 20px solid #fff;
+            width: 800px;
+            height: 400px;
+            margin: -220px 0 0 -420px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        #carousel img {
+            display: block;
+            float: left;
+            border: none;
+        }
+
+        #donate-spacer {
+            height: 100%;
+            margin-bottom: -90px;
+        }
+        #donate {
+            border-top: 1px solid #999;
+            width: 750px;
+            padding: 50px 75px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #donate p, #donate form {
+            margin: 0;
+            float: left;
+        }
+        #donate p {
+            width: 650px;
+        }
+        #donate form {
+            width: 100px;
+        }
+    </style>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Surface UI CSS Skin for Foundation 4</title>
+
+
+
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+  
+</head>
+<body class="cbp-spmenu-push">
+<div class="main">
+    <section>
+        <!-- Class "cbp-spmenu-open" gets applied to menu -->
+        <button id="showLeft" style="z-index: 2;"><p id="menup" style="color:white;"> &#9776; </p></button>
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Kameron' rel='stylesheet' type='text/css'>
+
+
+
+    </section>
+</div>
+<p id="logo">Hackhub</p>
+<a href="login.html"><div id="button"><p id="account">Account</p></div></a>
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <h3>Menu</h3>
+    <a href="__index__.html">Home</a>
+    <a href="profile.html">About Us</a>
+    <a href="add-event.html">Add Event</a>
+    <a href="contact-us.html">Contact-Us</a>
+
+
+</nav>
+
+<div id="gridcontent">
+
+    <div id="wrapper" style="margin-top: 250px;">
+        <div id="carousel" >
+            <img src="img/img1.png" width="800" height="427" />
+            <img src="img/img2.png" width="800" height="427" />
+            <img src="img/img4.png" width="800" height="427" />
+            <img src="img/img1.png" width="800" height="427" />
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/classie.js"></script>
+<script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+            menuTop = document.getElementById( 'cbp-spmenu-s3' ),
+            menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+            showLeft = document.getElementById( 'showLeft' ),
+            showRight = document.getElementById( 'showRight' ),
+            showTop = document.getElementById( 'showTop' ),
+            showBottom = document.getElementById( 'showBottom' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            showRightPush = document.getElementById( 'showRightPush' ),
+            body = document.body;
+
+    showLeft.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeft' );
+    };
+    showRight.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRight' );
+    };
+    showTop.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuTop, 'cbp-spmenu-open' );
+        disableOther( 'showTop' );
+    };
+    showBottom.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuBottom, 'cbp-spmenu-open' );
+        disableOther( 'showBottom' );
+    };
+    showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+    };
+    showRightPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toleft' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRightPush' );
+    };
+
+    function disableOther( button ) {
+        if( button !== 'showLeft' ) {
+            classie.toggle( showLeft, 'disabled' );
+        }
+        if( button !== 'showRight' ) {
+            classie.toggle( showRight, 'disabled' );
+        }
+        if( button !== 'showTop' ) {
+            classie.toggle( showTop, 'disabled' );
+        }
+        if( button !== 'showBottom' ) {
+            classie.toggle( showBottom, 'disabled' );
+        }
+        if( button !== 'showLeftPush' ) {
+            classie.toggle( showLeftPush, 'disabled' );
+        }
+        if( button !== 'showRightPush' ) {
+            classie.toggle( showRightPush, 'disabled' );
+        }
+    }
+</script>
+
+<div class="row">
+   <div class="large-12 columns">
+   </div>
+</div>
+
+<div class="row">
+   <div class="large-3 small-12 columns">
+      <div class="block jquery">
+         <div class="thumb"><img src="img/block-1.jpg" alt="Blocks">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">The Lion King</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block css">
+         <div class="thumb"><img src="img/block-2.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">A Bugs Life</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+           
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+
+   <div class="large-3 small-12 columns">
+      <div class="block html5">
+         <div class="thumb"><img src="img/block-3.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Gnomeo &amp; Juliet</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block featured">
+         <div class="thumb"><img src="img/block-4.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Toy Story 3</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="row2">
+   <div class="large-3 small-12 columns">
+      <div class="block jquery">
+         <div class="thumb"><img src="img/block-1.jpg" alt="Blocks">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">The Lion King</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block css">
+         <div class="thumb"><img src="img/block-2.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">A Bugs Life</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+           
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+
+   <div class="large-3 small-12 columns">
+      <div class="block html5">
+         <div class="thumb"><img src="img/block-3.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Gnomeo &amp; Juliet</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block featured">
+         <div class="thumb"><img src="img/block-4.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Toy Story 3</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+</div>
+    
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+
+  <script src="js/foundation.min.js"></script>
+    
+ 
+  <!--
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  -->
+  
+
+
+  <script>
+    $(document).foundation();
+  </script>
+
+
+</body>
+</html>
