@@ -2088,7 +2088,7 @@ label.error {
   .section-container.horizontal-nav > .section > .title,
   .section-container.accordion > section > .title,
   .section-container.accordion > .section > .title {
-    background-color: #efefef;
+    background-color: transparent;
     cursor: pointer;
     border: solid 1px #cccccc; }
     .section-container.auto > section > .title a, .section-container.auto > .section > .title a,
@@ -2225,7 +2225,7 @@ label.error {
 .section-container.tabs {
   border: none; }
   .section-container.tabs > section > .title, .section-container.tabs > .section > .title {
-    background-color: #efefef;
+    background-color: transparent;
     cursor: pointer;
     border: solid 1px #cccccc; }
     .section-container.tabs > section > .title a, .section-container.tabs > .section > .title a {
@@ -2283,7 +2283,7 @@ label.error {
   .section-container.auto {
     border: none; }
     .section-container.auto > section > .title, .section-container.auto > .section > .title {
-      background-color: #efefef;
+      background-color: transparent;
       cursor: pointer;
       border: solid 1px #cccccc; }
       .section-container.auto > section > .title a, .section-container.auto > .section > .title a {
@@ -2351,7 +2351,7 @@ label.error {
   .section-container.vertical-tabs {
     border: none; }
     .section-container.vertical-tabs > section > .title, .section-container.vertical-tabs > .section > .title {
-      background-color: #efefef;
+      background-color: transparent;
       cursor: pointer;
       border: solid 1px #cccccc; }
       .section-container.vertical-tabs > section > .title a, .section-container.vertical-tabs > .section > .title a {
@@ -2426,7 +2426,7 @@ label.error {
   .section-container.vertical-nav {
     border: none; }
     .section-container.vertical-nav > section > .title, .section-container.vertical-nav > .section > .title {
-      background-color: #efefef;
+      background-color: transparent;
       cursor: pointer;
       border: solid 1px #cccccc; }
       .section-container.vertical-nav > section > .title a, .section-container.vertical-nav > .section > .title a {
@@ -2496,10 +2496,10 @@ label.error {
         min-width: 12.5em; }
 
   .section-container.horizontal-nav {
-    background: #efefef;
+    background: transparent;
     border: 1px solid #cccccc; }
     .section-container.horizontal-nav > section > .title, .section-container.horizontal-nav > .section > .title {
-      background-color: #efefef;
+      background-color: transparent;
       cursor: pointer;
       border: solid 1px #cccccc; }
       .section-container.horizontal-nav > section > .title a, .section-container.horizontal-nav > .section > .title a {
@@ -2556,7 +2556,7 @@ label.error {
 .no-js .section-container {
   border-top: 1px solid #cccccc; }
   .no-js .section-container > section > .title, .no-js .section-container > .section > .title {
-    background-color: #efefef;
+    background-color: transparent;
     cursor: pointer;
     border: solid 1px #cccccc; }
     .no-js .section-container > section > .title a, .no-js .section-container > .section > .title a {
