@@ -5,3 +5,7 @@ body
   background-repeat:no-repeat;
   color:white;
 }
+
+p{
+  background-color:"white";
+}
