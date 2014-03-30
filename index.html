@@ -2,10 +2,15 @@
 <html lang="en" class="no-js">
 <head>
     <title>Main Page</title>
-    
-    <link rel="stylesheet" type="text/css" href="index.css">
+   
+    <link rel="stylesheet" type="text/css" href="__index__.css">
+        <link rel="stylesheet" type="text/css" href="foundation.css">
+        <link rel="stylesheet" type="text/css" href="surfaceui.css">
+          <!--SHOULD THESE BE IN THE HEAD-->
+            <link rel="stylesheet" href="foundation.css">
+             <link rel="stylesheet" href="surfaceui.css">
+           
     <!-- this is for surfaceui and foundation-->
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -29,16 +34,16 @@
         // the carousel
         var $carousel = null;
 
-        //	the draggable wrapper
+        //  the draggable wrapper
         var $wrapper = null;
 
-        //	the width of one item
+        //  the width of one item
         var itemWidth = 800;
 
-        //	the duration of the scrolling
+        //  the duration of the scrolling
         var scrollDuration = 300;
 
-        //	dragging-engine
+        //  dragging-engine
         var startDragPosition = false;
         function startDrag( event ) {
             event.preventDefault();
@@ -81,7 +86,7 @@
 
         $(function() {
 
-            //	the carousel
+            //  the carousel
             $carousel = $('#carousel');
             $carousel.carouFredSel({
                 width: 800 * 3,
@@ -98,7 +103,7 @@
                 auto: false
             });
 
-            //	make the wrapper draggable
+            //  make the wrapper draggable
             $wrapper = $carousel.parent();
             $wrapper.css({
                 'cursor': 'move',
@@ -117,8 +122,7 @@
         }
         body {
             min-height: 550px;
-            background-color: #eee;
-        }
+                    }
         body * {
             font-family: Arial, Geneva, SunSans-Regular, sans-serif;
             font-size: 14px;
@@ -172,13 +176,28 @@
             width: 100px;
         }
     </style>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Surface UI CSS Skin for Foundation 4</title>
 
+
+
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+  
 </head>
 <body class="cbp-spmenu-push">
 <div class="main">
     <section>
         <!-- Class "cbp-spmenu-open" gets applied to menu -->
-        <button id="showLeft" style="z-index: 2;"><p id="menup"> &#9776; </p></button>
+        <button id="showLeft" style="z-index: 2;"><p id="menup"> &#9776;</p>
+        <form action="#" id="search_box">
+        <div class="wrapper1">
+            <input type="text" id="search" name="search" placeholder='Search for Hackathons'>
+            <button type="submit" class="search_btn"><img src="search_icon.png" title="Search"></button>
+            </div>
+            </form>
+        </button>
     </section>
 </div>
 <p id="logo">Hackhub</p>
@@ -277,5 +296,115 @@
         }
     }
 </script>
+
+<div class="row">
+   <div class="large-12 columns">
+   </div>
+</div>
+
+<div class="row">
+   <div class="large-3 small-12 columns">
+      <div class="block jquery">
+         <div class="thumb"><img src="img/block-1.jpg" alt="Blocks">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">The Lion King</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block css">
+         <div class="thumb"><img src="img/block-2.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">A Bugs Life</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+           
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+
+   <div class="large-3 small-12 columns">
+      <div class="block html5">
+         <div class="thumb"><img src="img/block-3.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Gnomeo &amp; Juliet</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+   <div class="large-3 small-12 columns">
+      <div class="block featured">
+         <div class="thumb"><img src="img/block-4.jpg" alt="Block">
+            <span class="ico-popup"><a href="#" target="_blank"><i class="icon-search"></i></a></span>
+            <span class="overlay"></span>
+         </div>
+         <div class="desc">
+            <div class="title">Toy Story 3</div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quam ac lectus commodo tincidunt non vitae tortor.
+            </p>
+            <a href="#" target="_blank" class="button small radius wide alert">Source</a>
+         </div>
+      </div>
+   </div>
+</div>
+ 
+    
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+
+  <script src="js/foundation.min.js"></script>
+    
+ 
+  <!--
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  -->
+  
+
+
+  <script>
+    $(document).foundation();
+  </script>
+
+
 </body>
 </html>
